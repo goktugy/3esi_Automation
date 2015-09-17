@@ -1,0 +1,53 @@
+# lines with # are treated as comments
+# server:port/database name - qoutes (") if there are spaces in the database name
+#-d "3es0192:1435/315esimanageDemo"
+-d "3es0209:1433/318smog"
+# -h says that headers should be written in the first column
+-h
+-o C:\MeasureExportAutomation\MeasureExport\318capex.csv
+-z
+
+# there are pre-defined groupings (-g) which are always in two parts i.e., Project.Name
+# for a grouping from the Hierarchy, its the "Custom=Prd Region"
+-g BUDGET.NAME
+-g PROJECT.NAME
+-g ASSET.NAME
+-g CAPEX.CATEGORY
+-g AFE.NAME
+-g AFE.MANAGER
+-g AFE.STATUS
+#-g CAPEX.GROUP
+#-g CAPEX.TYPE
+
+# --filter "CAPEX.TYPE:Completion,Equip &Tie-in"
+
+#Capex
+
+-c UnriskedGross -m expenditure -e "Unrisked Gross" -t Forecast -U CAD -X Default #-column-filter "CAPEX.TYPE:Completion,Equip &Tie-in"
+-c UnriskedGross -m expenditure -e "Unrisked Gross" -t Actuals -U CAD -X Default #-column-filter "CAPEX.TYPE:Completion,Equip &Tie-in"
+-c UnriskedGross -m expenditure -e "Unrisked Gross" -t "Field Est" -U CAD -X Default #-column-filter "CAPEX.TYPE:Completion,Equip &Tie-in"
+-c UnriskedGross -m expenditure -e "Unrisked Gross" -t Blended -U CAD -X Default -a 2011-01-01 #-column-filter "CAPEX.TYPE:Completion,Equip &Tie-in"
+
+
+-c RiskedGross -m expenditure -e "Risked Gross" -t Forecast -U CAD -X Default -E "Currency Escalation"
+-c RiskedGross -m expenditure -e "Risked Gross" -t Actuals -U CAD -X Default
+-c RiskedGross -m expenditure -e "Risked Gross" -t "Field Est" -U CAD -X Default
+-c RiskedGross -m expenditure -e "Risked Gross" -t Blended -U CAD -X Default -a 2011-01-01
+
+
+-c UnriskedNet -m expenditure -e "Unrisked Net" -t Forecast -U CAD -X Default -E "Currency Escalation"
+-c UnriskedNet -m expenditure -e "Unrisked Net" -t Actuals -U CAD -X Default
+-c UnriskedNet -m expenditure -e "Unrisked Net" -t "Field Est" -U CAD -X Default
+-c UnriskedNet -m expenditure -e "Unrisked Net" -t Blended -U CAD -X Default -a 2011-01-01
+
+
+-c RiskedNet -m expenditure -e "Risked Net" -t Forecast -U CAD -X Default -E "Currency Escalation"
+-c RiskedNet -m expenditure -e "Risked Net" -t Actuals -U CAD -X Default
+-c RiskedNet -m expenditure -e "Risked Net" -t "Field Est" -U CAD -X Default
+-c RiskedNet -m expenditure -e "Risked Net" -t Blended -U CAD -X Default -a 2011-01-01
+
+
+#start of data, number of period, periodicity (M=Monthly), and Project Set Name 
+#2011-01-01 36 M "WI AnalysisCaseTest"
+
+2011-01-01 36 M "Evergreen Forecast"

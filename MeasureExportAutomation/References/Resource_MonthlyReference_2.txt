@@ -1,0 +1,32 @@
+# lines with # are treated as comments
+# server:port/database name - qoutes (") if there are spaces in the database name
+#-d "3es0192:1435/315esimanageDemo"
+-d "3es0209:1433/SMOG"
+# -h says that headers should be written in the first column
+-h
+-o C:\MeasureExportAutomation\MeasureExport\320Resource.csv
+
+# there are pre-defined groupings (-g) which are always in two parts i.e., Project.Name
+# for a grouping from the Hierarchy, its the "Custom=Prd Region"
+-g BUDGET.NAME
+-g PROJECT.NAME
+-g ASSET.NAME
+
+# --filter "CAPEX.TYPE:Completion,Equip &Tie-in"
+
+#Resource Cost
+
+-c GrossForecast -m RESOURCE_COST -e Gross -t Forecast -U CAD -X Default -E "Currency Escalation"
+-c GrossActuals -m RESOURCE_COST -e Gross -t Actual -U CAD -X Default 
+
+
+-c UnriskedForecast -m RESOURCE_COST -e Risked -t Forecast -U CAD -X Default -E "Currency Escalation"
+-c UnriskedActual -m RESOURCE_COST -e Risked -t Actual -U CAD -X Default 
+
+
+
+
+#start of data, number of period, periodicity (M=Monthly), and Project Set Name 
+#2011-01-01 36 M "WI AnalysisCaseTest"
+
+2011-01-01 36 M "Evergreen Forecast"

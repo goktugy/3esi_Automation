@@ -1,0 +1,1 @@
+C:\Python33\python.exe C:\workspace\DailyRun\src\TestAutomation.py

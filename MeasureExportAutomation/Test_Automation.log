@@ -1,0 +1,51 @@
+Starting Automation 20140918-143049
+
+Running Measure Export For  .\References\Production_MonthlyReference_1.txt with C:\Builds\3.18_PackageWithPeep\esi.manage.export.measure\exportMeasure.exe 
+
+Running Measure Export For  .\References\Reserve_MonthlyReference_1.txt with C:\Builds\3.18_PackageWithPeep\esi.manage.export.measure\exportMeasure.exe 
+
+Running Measure Export For  .\References\Opex_MonthlyReference_1.txt with C:\Builds\3.18_PackageWithPeep\esi.manage.export.measure\exportMeasure.exe 
+
+Running Measure Export For  .\References\Resource_MonthlyReference_1.txt with C:\Builds\3.18_PackageWithPeep\esi.manage.export.measure\exportMeasure.exe 
+
+Running Measure Export For  .\References\Revenue_MonthlyReference_1.txt with C:\Builds\3.18_PackageWithPeep\esi.manage.export.measure\exportMeasure.exe 
+
+Running Measure Export For  .\References\Capex_MonthlyReference_1.txt with C:\Builds\3.18_PackageWithPeep\esi.manage.export.measure\exportMeasure.exe 
+
+Running Measure Export For  .\References\Activity_MonthlyReference_1.txt with C:\Builds\3.18_PackageWithPeep\esi.manage.export.measure\exportMeasure.exe 
+
+Running Measure Export For  .\References\RigRelease_MonthlyReference_1.txt with C:\Builds\3.18_PackageWithPeep\esi.manage.export.measure\exportMeasure.exe 
+
+Running Measure Export For  .\References\Production_MonthlyReference_2.txt with C:\Builds\manage-trunk-2014-09-16_17-17\product\esi.manage.export.measure\exportMeasure.exe 
+
+Running Measure Export For  .\References\Reserve_MonthlyReference_2.txt with C:\Builds\manage-trunk-2014-09-16_17-17\product\esi.manage.export.measure\exportMeasure.exe 
+
+Running Measure Export For  .\References\Opex_MonthlyReference_2.txt with C:\Builds\manage-trunk-2014-09-16_17-17\product\esi.manage.export.measure\exportMeasure.exe 
+
+Running Measure Export For  .\References\Resource_MonthlyReference_2.txt with C:\Builds\manage-trunk-2014-09-16_17-17\product\esi.manage.export.measure\exportMeasure.exe 
+
+Running Measure Export For  .\References\Revenue_MonthlyReference_2.txt with C:\Builds\manage-trunk-2014-09-16_17-17\product\esi.manage.export.measure\exportMeasure.exe 
+
+Running Measure Export For  .\References\Capex_MonthlyReference_2.txt with C:\Builds\manage-trunk-2014-09-16_17-17\product\esi.manage.export.measure\exportMeasure.exe 
+
+Running Measure Export For  .\References\Activity_MonthlyReference_2.txt with C:\Builds\manage-trunk-2014-09-16_17-17\product\esi.manage.export.measure\exportMeasure.exe 
+
+Running Measure Export For  .\References\RigRelease_MonthlyReference_2.txt with C:\Builds\manage-trunk-2014-09-16_17-17\product\esi.manage.export.measure\exportMeasure.exe 
+
+Comparing Results For .\MeasureExport\318production.csv 
+
+Comparing Results For .\MeasureExport\318reserves.csv 
+
+Comparing Results For .\MeasureExport\318opex.csv 
+
+Comparing Results For .\MeasureExport\318resource.csv 
+
+Comparing Results For .\MeasureExport\318revenue.csv 
+
+Comparing Results For .\MeasureExport\318capex.csv 
+
+Comparing Results For .\MeasureExport\318Activity.csv 
+
+Comparing Results For .\MeasureExport\318RigRelease.csv 
+
+Ending Automation 20140918-143206

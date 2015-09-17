@@ -1,0 +1,114 @@
+# lines with # are treated as comments
+# server:port/database name - qoutes (") if there are spaces in the database name
+#-d "3es0192:1435/315esimanageDemo"
+-d "3es0209:1433/318smog"
+# -h says that headers should be written in the first column
+-h
+# Output File
+-o C:\MeasureExportAutomation\MeasureExport\318opex.csv
+-z
+#-s 2012-01-10 
+#--exclude-user 3ESI\aissa
+
+
+# there are pre-defined groupings (-g) which are always in two parts i.e., Project.Name
+# for a grouping from the Hierarchy, its the "Custom=Prd Region"
+-g BUDGET.NAME
+-g PROJECT.NAME
+-g ASSET.NAME
+-g OPEX.CATEGORY
+-g OPEX.TYPE
+
+
+
+#Opex
+# -------------------   Gross -------------------------------------
+-c "Forecast Gross Risked Row" -m opex -e "Gross Risked Raw" -t Forecast -U CAD -X Default --consolidation 1-Proven:1P
+-c "Actuals Gross Risked Row" -m opex -e "Gross Risked Raw" -t Actuals -U CAD -X Default --consolidation 1-Proven:1P
+-c "Blended Gross Risked Row" -m opex -e "Gross Risked Raw" -t Blended -U CAD -X Default -a 2011-01-01 --consolidation 1-Proven:1P
+-c "FieldEst Gross Risked Row" -m opex -e "Gross Risked Raw" -t "Field Est" -U CAD -X Default --consolidation 1-Proven:1P
+-c "FinActuals Gross Risked Row" -m opex -e "Gross Risked Raw" -t "Fin Actls" -U CAD -X Default --consolidation 1-Proven:1P
+-c "FinBlend Gross Risked Row" -m opex -e "Gross Risked Raw" -t "Fin Blend" -U CAD -X Default -F -a 2011-01-01 --consolidation 1-Proven:1P
+
+-c "Forecast Gross Unrisked Raw" -m opex -e "Gross Unrisked Raw" -t Forecast -U CAD -X Default --consolidation 1-Proven:1P
+-c "Actuals Gross Unrisked Raw" -m opex -e "Gross Unrisked Raw" -t Actuals -U CAD -X Default --consolidation 1-Proven:1P
+-c "Blended Gross Unrisked Raw" -m opex -e "Gross Unrisked Raw" -t Blended -U CAD -X Default -a 2011-01-01 --consolidation 1-Proven:1P
+-c "FieldEst Gross Unrisked Raw" -m opex -e "Gross Unrisked Raw" -t "Field Est" -U CAD -X Default --consolidation 1-Proven:1P
+-c "FinActuals Gross Unrisked Raw" -m opex -e "Gross Unrisked Raw" -t "Fin Actls" -U CAD -X Default --consolidation 1-Proven:1P
+-c "FinBlend Gross Unrisked Raw" -m opex -e "Gross Unrisked Raw" -t "Fin Blend" -U CAD -X Default -F -a 2011-01-01 --consolidation 1-Proven:1P
+
+-c "Forecast Gross Risked Shrunk" -m opex -e "Gross Risked Shrunk" -t Forecast -U CAD -X Default --consolidation 1-Proven:1P
+-c "Actuals Gross Risked Shrunk" -m opex -e "Gross Risked Shrunk" -t Actuals -U CAD -X Default --consolidation 1-Proven:1P
+-c "Blended Gross Risked Shrunk" -m opex -e "Gross Risked Shrunk" -t Blended -U CAD -X Default -a 2011-01-01 --consolidation 1-Proven:1P
+-c "FieldEst Gross Risked Shrunk" -m opex -e "Gross Risked Shrunk" -t "Field Est" -U CAD -X Default --consolidation 1-Proven:1P
+-c "FinActuals Gross Risked Shrunk" -m opex -e "Gross Risked Shrunk" -t "Fin Actls" -U CAD -X Default --consolidation 1-Proven:1P
+-c "FinBlend Gross Risked Shrunk" -m opex -e "Gross Risked Shrunk" -t "Fin Blend" -U CAD -X Default -F -a 2011-01-01 --consolidation 1-Proven:1P
+
+-c "Forecast Gross Unrisked Shrunk" -m opex -e "Gross Unrisked Shrunk" -t Forecast -U CAD -X Default --consolidation 1-Proven:1P
+-c "Actuals Gross Unrisked Shrunk" -m opex -e "Gross Unrisked Shrunk" -t Actuals -U CAD -X Default --consolidation 1-Proven:1P
+-c "Blended Gross Unrisked Shrunk" -m opex -e "Gross Unrisked Shrunk" -t Blended -U CAD -X Default -a 2011-01-01 --consolidation 1-Proven:1P
+-c "FieldEst Gross Unrisked Shrunk" -m opex -e "Gross Unrisked Shrunk" -t "Field Est" -U CAD -X Default --consolidation 1-Proven:1P
+-c "FinActuals Gross Unrisked Shrunk" -m opex -e "Gross Unrisked Shrunk" -t "Fin Actls" -U CAD -X Default --consolidation 1-Proven:1P
+-c "FinBlend Gross Unrisked Shrunk" -m opex -e "Gross Unrisked Shrunk" -t "Fin Blend" -U CAD -X Default -F -a 2011-01-01 --consolidation 1-Proven:1P
+
+# -------------------   Net -------------------------------------
+
+-c "Forecast Net Risked Raw" -m opex -e "Net Risked Raw" -t Forecast -U CAD -X Default -E "Currency Escalation" --consolidation 1-Proven:1P
+-c "Actuals Net Risked Raw" -m opex -e "Net Risked Raw" -t Actuals -U CAD -X Default --consolidation 1-Proven:1P
+-c "Blended Net Risked Raw" -m opex -e "Net Risked Raw" -t Blended -U CAD -X Default -a 2011-01-01 --consolidation 1-Proven:1P
+-c "FieldEst Net Risked Raw" -m opex -e "Net Risked Raw" -t "Field Est" -U CAD -X Default --consolidation 1-Proven:1P
+-c "FinActuals Net Risked Raw" -m opex -e "Net Risked Raw" -t "Fin Actls" -U CAD -X Default --consolidation 1-Proven:1P
+-c "FinBlend Net Risked Raw" -m opex -e "Net Risked Raw" -t "Fin Blend" -U CAD -X Default -F -a 2011-01-01 --consolidation 1-Proven:1P
+
+-c "Forecast Net Unrisked Raw" -m opex -e "Net Unrisked Raw" -t Forecast -U CAD -X Default --consolidation 1-Proven:1P
+-c "Actuals Net Unrisked Raw" -m opex -e "Net Unrisked Raw" -t Actuals -U CAD -X Default --consolidation 1-Proven:1P
+-c "Blended Net Unrisked Raw" -m opex -e "Net Unrisked Raw" -t Blended -U CAD -X Default -a 2011-01-01 --consolidation 1-Proven:1P
+-c "FieldEst Net Unrisked Raw" -m opex -e "Net Unrisked Raw" -t "Field Est" -U CAD -X Default --consolidation 1-Proven:1P
+-c "FinActuals Net Unrisked Raw" -m opex -e "Net Unrisked Raw" -t "Fin Actls" -U CAD -X Default --consolidation 1-Proven:1P
+-c "FinBlend Net Unrisked Raw" -m opex -e "Net Unrisked Raw" -t "Fin Blend" -U CAD -X Default -F -a 2011-01-01 --consolidation 1-Proven:1P
+
+-c "Forecast Net Risked Sales" -m opex -e "Net Risked Sales" -t Forecast -U CAD -X Default --consolidation 1-Proven:1P
+-c "Actuals Net Risked Sales" -m opex -e "Net Risked Sales" -t Actuals -U CAD -X Default  --consolidation 1-Proven:1P
+-c "Blended Net Risked Sales" -m opex -e "Net Risked Sales" -t Blended -U CAD -X Default -a 2011-01-01 --consolidation 1-Proven:1P
+-c "FieldEst Net Risked Sales" -m opex -e "Net Risked Sales" -t "Field Est" -U CAD -X Default --consolidation 1-Proven:1P
+-c "FinActuals Net Risked Sales" -m opex -e "Net Risked Sales" -t "Fin Actls" -U CAD -X Default --consolidation 1-Proven:1P
+-c "FinBlend Net Risked Sales" -m opex -e "Net Risked Sales" -t "Fin Blend" -U CAD -X Default -F -a 2011-01-01 --consolidation 1-Proven:1P
+
+-c "Forecast Net Unrisked Sales" -m opex -e "Net Unrisked Sales" -t Forecast -U CAD -X Default --consolidation 1-Proven:1P
+-c "Actuals Net Unrisked Sales" -m opex -e "Net Unrisked Sales" -t Actuals -U CAD -X Default --consolidation 1-Proven:1P
+-c "Blended Net Unrisked Sales" -m opex -e "Net Unrisked Sales" -t Blended -U CAD -X Default -a 2011-01-01 --consolidation 1-Proven:1P
+-c "FieldEst Net Unrisked Sales" -m opex -e "Net Unrisked Sales" -t "Field Est" -U CAD -X Default --consolidation 1-Proven:1P
+-c "FinActuals Net Unrisked Sales" -m opex -e "Net Unrisked Sales" -t "Fin Actls" -U CAD -X Default --consolidation 1-Proven:1P
+-c "FinBlend Net Unrisked Sales" -m opex -e "Net Unrisked Sales" -t "Fin Blend" -U CAD -X Default -F -a 2011-01-01 --consolidation 1-Proven:1P
+
+# -------------------   Net Royalty  -------------------------------------
+
+# Add Royalty Price Scenario -Y Default
+
+-c "Forecast Net Risked After Royalty" -m opex -e "Net Risked After Royalty" -t Forecast -U CAD -X Default -E "Currency Escalation"  --consolidation 1-Proven:1P --pricescenario "Royalty - Low"
+-c "Actuals Net Risked After Royalty" -m opex -e "Net Risked After Royalty" -t Actuals -U CAD -X Default --consolidation 1-Proven:1P --pricescenario "Royalty - Low"
+-c "Blended Net Risked After Royalty" -m opex -e "Net Risked After Royalty" -t Blended -U CAD -X Default -a 2011-01-01 --consolidation 1-Proven:1P --pricescenario "Royalty - Low"
+-c "FieldEst Net Risked After Royalty" -m opex -e "Net Risked After Royalty" -t "Field Est" -U CAD -X Default --consolidation 1-Proven:1P --pricescenario "Royalty - Low"
+-c "FinActuals Net Risked After Royalty" -m opex -e "Net Risked After Royalty" -t "Fin Actls" -U CAD -X Default --consolidation 1-Proven:1P --pricescenario "Royalty - Low"
+-c "FinBlend Net Risked After Royalty" -m opex -e "Net Risked After Royalty" -t "Fin Blend" -U CAD -X Default -F -a 2011-01-01 --consolidation 1-Proven:1P --pricescenario "Royalty - Low"
+
+-c "Forecast Net Unrisked After Royalty" -m opex -e "Net Unrisked After Royalty" -t Forecast -U CAD -X Default --consolidation 1-Proven:1P --pricescenario "Royalty - Low"
+-c "Actuals Net Unrisked After Royalty" -m opex -e "Net Unrisked After Royalty" -t Actuals -U CAD -X Default --consolidation 1-Proven:1P --pricescenario "Royalty - Low"
+-c "Blended Net Unrisked After Royalty" -m opex -e "Net Unrisked After Royalty" -t Blended -U CAD -X Default -a 2011-01-01 --consolidation 1-Proven:1P --pricescenario "Royalty - Low"
+-c "FieldEst Net Unrisked After Royalty" -m opex -e "Net Unrisked After Royalty" -t "Field Est" -U CAD -X Default --consolidation 1-Proven:1P --pricescenario "Royalty - Low"
+-c "FinActuals Net Unrisked After Royalty" -m opex -e "Net Unrisked After Royalty" -t "Fin Actls" -U CAD -X Default --consolidation 1-Proven:1P --pricescenario "Royalty - Low"
+-c "FinBlend Net Unrisked After Royalty" -m opex -e "Net Unrisked After Royalty" -t "Fin Blend" -U CAD -X Default -F -a 2011-01-01 --consolidation 1-Proven:1P --pricescenario "Royalty - Low"
+
+
+# -------------------   Additional Forecast Alternatives  -------------------------------------
+
+-c "Forecast Gross Unrisked Row" -m opex -e "Gross Unrisked Raw" -t Forecast -U CAD -X Default -D NONE  --consolidation 1-Proven:1P
+-c "Forecast Gross Unrisked Row" -m opex -e "Gross Unrisked Raw" -t Forecast -U CAD -X Default -D SCHEDULED --consolidation 1-Proven:1P
+-c "Forecast Gross Unrisked Row" -m opex -e "Gross Unrisked Raw" -t Forecast -U CAD -X Default -D UNSCHEDULED --consolidation 1-Proven:1P
+-c "Forecast Gross Unrisked Row" -m opex -e "Gross Unrisked Raw" -t Forecast -U CAD -X Default -D ALL --consolidation 1-Proven:1P
+
+# ---------------------------------------------------------------------------------------------
+
+#start of data, number of period, periodicity (M=Monthly), and Project Set Name 
+#2011-01-01 36 M "WI AnalysisCaseTest"
+2011-01-01 36 M "Evergreen Forecast"
