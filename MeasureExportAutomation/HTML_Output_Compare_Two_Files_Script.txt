@@ -1,6 +1,0 @@
-# Run the comparison and generate an HTML report with the differences
-#file-report layout:side-by-side &
-file-report layout:over-under &
-  options:display-mismatches,line-numbers &
-  title:Measure_Export_Production_Differences_Report &
-  output-to:%3 output-options:html-color %1 %2
